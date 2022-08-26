@@ -4,13 +4,13 @@
 set PROJ_DIR "."
 set SOURCE_DIR "./src"
 set PROJ_NAME "ws"
-set PROJ_TOP "main"
+set PROJ_TOP "top"
 set SOLUTION_NAME "sol1"
 set SOLUTION_PART "xc7a15tcpg236-1"
 set SOLUTION_CLKP 1000.0
 # MAJOR.MINOR.REVISION
 set VERSION "1.0.0"
-set DISPLAY_NAME "HLS Project"
+set DISPLAY_NAME "HLS UART Transmitter"
 
 # ------------------------------------------------------------------------------
 # Create Project
