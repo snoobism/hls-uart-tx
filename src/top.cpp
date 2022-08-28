@@ -24,8 +24,6 @@ void top(ap_uint<8> data, ap_uint<1> load, ap_uint<1> write,
 	#pragma HLS interface ap_none port=empty
 	#pragma HLS interface ap_none port=tx
 
-	#pragma HLS pipeline II=1
-
 	const ap_uint<32> bit_duration = FREQUENCY/BAUDRATE - 2;// number of clock cycles that must be held by a tx bit
 	static bool load_d = 0;									// flip flop used to detect a load rising edge
 	static bool write_d = 0;								// flip flop used to detect a write rising edge
