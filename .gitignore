@@ -1,4 +1,7 @@
 # ignore everything in workspace dir
-ws/*
 vitis_hls.log
 *.zip
+ws/*
+!ws/sol1/
+ws/sol1/*
+!ws/sol1/syn/
