@@ -1,0 +1,375 @@
+<profile>
+    <ReportVersion>
+        <Version>2021.1</Version>
+    </ReportVersion>
+    <UserAssignments>
+        <unit>ns</unit>
+        <ProductFamily>artix7</ProductFamily>
+        <Part>xc7a15t-cpg236-1</Part>
+        <TopModelName>top</TopModelName>
+        <TargetClockPeriod>10.00</TargetClockPeriod>
+        <ClockUncertainty>2.70</ClockUncertainty>
+        <FlowTarget>vivado</FlowTarget>
+    </UserAssignments>
+    <PerformanceEstimates>
+        <PipelineType>no</PipelineType>
+        <SummaryOfTimingAnalysis>
+            <unit>ns</unit>
+            <EstimatedClockPeriod>5.606</EstimatedClockPeriod>
+        </SummaryOfTimingAnalysis>
+        <SummaryOfOverallLatency>
+            <unit>clock cycles</unit>
+            <Best-caseLatency>0</Best-caseLatency>
+            <Average-caseLatency>0</Average-caseLatency>
+            <Worst-caseLatency>0</Worst-caseLatency>
+            <Best-caseRealTimeLatency>0 ns</Best-caseRealTimeLatency>
+            <Average-caseRealTimeLatency>0 ns</Average-caseRealTimeLatency>
+            <Worst-caseRealTimeLatency>0 ns</Worst-caseRealTimeLatency>
+            <Interval-min>1</Interval-min>
+            <Interval-max>1</Interval-max>
+        </SummaryOfOverallLatency>
+    </PerformanceEstimates>
+    <AreaEstimates>
+        <Resources>
+            <FF>129</FF>
+            <LUT>192</LUT>
+            <BRAM_18K>0</BRAM_18K>
+            <DSP>0</DSP>
+            <URAM>0</URAM>
+        </Resources>
+        <AvailableResources>
+            <BRAM_18K>50</BRAM_18K>
+            <DSP>45</DSP>
+            <FF>20800</FF>
+            <LUT>10400</LUT>
+            <URAM>0</URAM>
+        </AvailableResources>
+    </AreaEstimates>
+    <InterfaceSummary>
+        <RtlPorts>
+            <name>ap_clk</name>
+            <Object>top</Object>
+            <Type>return value</Type>
+            <Scope/>
+            <IOProtocol>ap_ctrl_none</IOProtocol>
+            <IOConfig/>
+            <Dir>in</Dir>
+            <Bits>1</Bits>
+            <Attribute>control</Attribute>
+        </RtlPorts>
+        <RtlPorts>
+            <name>ap_rst</name>
+            <Object>top</Object>
+            <Type>return value</Type>
+            <Scope/>
+            <IOProtocol>ap_ctrl_none</IOProtocol>
+            <IOConfig/>
+            <Dir>in</Dir>
+            <Bits>1</Bits>
+            <Attribute>control</Attribute>
+        </RtlPorts>
+        <RtlPorts>
+            <name>data</name>
+            <Object>data</Object>
+            <Type>scalar</Type>
+            <Scope/>
+            <IOProtocol>ap_none</IOProtocol>
+            <IOConfig/>
+            <Dir>in</Dir>
+            <Bits>8</Bits>
+            <Attribute>data</Attribute>
+            <CType>int</CType>
+        </RtlPorts>
+        <RtlPorts>
+            <name>load</name>
+            <Object>load</Object>
+            <Type>scalar</Type>
+            <Scope/>
+            <IOProtocol>ap_none</IOProtocol>
+            <IOConfig/>
+            <Dir>in</Dir>
+            <Bits>1</Bits>
+            <Attribute>data</Attribute>
+            <CType>int</CType>
+        </RtlPorts>
+        <RtlPorts>
+            <name>write_r</name>
+            <Object>write_r</Object>
+            <Type>scalar</Type>
+            <Scope/>
+            <IOProtocol>ap_none</IOProtocol>
+            <IOConfig/>
+            <Dir>in</Dir>
+            <Bits>1</Bits>
+            <Attribute>data</Attribute>
+            <CType>int</CType>
+        </RtlPorts>
+        <RtlPorts>
+            <name>full</name>
+            <Object>full</Object>
+            <Type>pointer</Type>
+            <Scope/>
+            <IOProtocol>ap_none</IOProtocol>
+            <IOConfig/>
+            <Dir>out</Dir>
+            <Bits>1</Bits>
+            <Attribute>data</Attribute>
+            <CType>int</CType>
+        </RtlPorts>
+        <RtlPorts>
+            <name>empty</name>
+            <Object>empty</Object>
+            <Type>pointer</Type>
+            <Scope/>
+            <IOProtocol>ap_none</IOProtocol>
+            <IOConfig/>
+            <Dir>out</Dir>
+            <Bits>1</Bits>
+            <Attribute>data</Attribute>
+            <CType>int</CType>
+        </RtlPorts>
+        <RtlPorts>
+            <name>tx</name>
+            <Object>tx</Object>
+            <Type>pointer</Type>
+            <Scope/>
+            <IOProtocol>ap_none</IOProtocol>
+            <IOConfig/>
+            <Dir>out</Dir>
+            <Bits>1</Bits>
+            <Attribute>data</Attribute>
+            <CType>int</CType>
+        </RtlPorts>
+    </InterfaceSummary>
+    <RTLDesignHierarchy>
+        <TopModule MAX_DEPTH="2">
+            <ModuleName>top</ModuleName>
+            <BindInstances>data_fifo_fifo_U add_ln870_fu_280_p2 add_ln870_1_fu_334_p2</BindInstances>
+        </TopModule>
+    </RTLDesignHierarchy>
+    <ModuleInformation>
+        <Module>
+            <Name>top</Name>
+            <PerformanceEstimates>
+                <SummaryOfTimingAnalysis>
+                    <TargetClockPeriod>10.00</TargetClockPeriod>
+                    <ClockUncertainty>2.70</ClockUncertainty>
+                    <EstimatedClockPeriod>5.606</EstimatedClockPeriod>
+                </SummaryOfTimingAnalysis>
+                <SummaryOfOverallLatency>
+                    <Best-caseLatency>0</Best-caseLatency>
+                    <Average-caseLatency>0</Average-caseLatency>
+                    <Worst-caseLatency>0</Worst-caseLatency>
+                    <Best-caseRealTimeLatency>0 ns</Best-caseRealTimeLatency>
+                    <Average-caseRealTimeLatency>0 ns</Average-caseRealTimeLatency>
+                    <Worst-caseRealTimeLatency>0 ns</Worst-caseRealTimeLatency>
+                    <PipelineInitiationInterval>1</PipelineInitiationInterval>
+                    <PipelineType>no</PipelineType>
+                </SummaryOfOverallLatency>
+            </PerformanceEstimates>
+            <AreaEstimates>
+                <Resources>
+                    <FF>129</FF>
+                    <AVAIL_FF>20800</AVAIL_FF>
+                    <UTIL_FF>~0</UTIL_FF>
+                    <LUT>192</LUT>
+                    <AVAIL_LUT>10400</AVAIL_LUT>
+                    <UTIL_LUT>1</UTIL_LUT>
+                    <BRAM_18K>0</BRAM_18K>
+                    <AVAIL_BRAM>50</AVAIL_BRAM>
+                    <UTIL_BRAM>0</UTIL_BRAM>
+                    <DSP>0</DSP>
+                    <AVAIL_DSP>45</AVAIL_DSP>
+                    <UTIL_DSP>0</UTIL_DSP>
+                    <URAM>0</URAM>
+                    <AVAIL_URAM>0</AVAIL_URAM>
+                    <UTIL_URAM>0</UTIL_URAM>
+                </Resources>
+            </AreaEstimates>
+            <BindNodes>
+                <BindNode BINDTYPE="storage" BRAM="0" DISPNAME="bind_storage fifo" DSP="0" ID="" IMPL="srl" LATENCY="0" LOOP="" OPTYPE="fifo" PRAGMA="" RTLNAME="data_fifo_fifo_U" SOURCE="./src/top.cpp:36" URAM="0" VARIABLE="data_fifo"/>
+                <BindNode BINDTYPE="op" BRAM="0" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="" OPTYPE="add" PRAGMA="" RTLNAME="add_ln870_fu_280_p2" SOURCE="C:/Xilinx/Vitis_HLS/2021.1/common/technology/autopilot\ap_int_base.h:870" URAM="0" VARIABLE="add_ln870"/>
+                <BindNode BINDTYPE="op" BRAM="0" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="" OPTYPE="add" PRAGMA="" RTLNAME="add_ln870_1_fu_334_p2" SOURCE="C:/Xilinx/Vitis_HLS/2021.1/common/technology/autopilot\ap_int_base.h:870" URAM="0" VARIABLE="add_ln870_1"/>
+            </BindNodes>
+        </Module>
+    </ModuleInformation>
+    <FIFOInformation/>
+    <UserConfigCommands>
+        <config_export display_name="HLS UART TX" output="C:/hls/hls-uart-tx/ws/top.zip" version="1.0.0" vivado_clock="1000.0"/>
+    </UserConfigCommands>
+    <Args>
+        <Arg ArgName="data" index="0" direction="in" srcType="ap_uint&lt;8&gt;" srcSize="8">
+            <hwRefs>
+                <hwRef type="port" interface="data" name="data" usage="data" direction="in"/>
+            </hwRefs>
+        </Arg>
+        <Arg ArgName="load" index="1" direction="in" srcType="ap_uint&lt;1&gt;" srcSize="8">
+            <hwRefs>
+                <hwRef type="port" interface="load" name="load" usage="data" direction="in"/>
+            </hwRefs>
+        </Arg>
+        <Arg ArgName="write" index="2" direction="in" srcType="ap_uint&lt;1&gt;" srcSize="8">
+            <hwRefs>
+                <hwRef type="port" interface="write_r" name="write_r" usage="data" direction="in"/>
+            </hwRefs>
+        </Arg>
+        <Arg ArgName="full" index="3" direction="out" srcType="ap_uint&lt;1&gt;&amp;" srcSize="8">
+            <hwRefs>
+                <hwRef type="port" interface="full" name="full" usage="data" direction="out"/>
+            </hwRefs>
+        </Arg>
+        <Arg ArgName="empty" index="4" direction="out" srcType="ap_uint&lt;1&gt;&amp;" srcSize="8">
+            <hwRefs>
+                <hwRef type="port" interface="empty" name="empty" usage="data" direction="out"/>
+            </hwRefs>
+        </Arg>
+        <Arg ArgName="tx" index="5" direction="out" srcType="ap_uint&lt;1&gt;&amp;" srcSize="8">
+            <hwRefs>
+                <hwRef type="port" interface="tx" name="tx" usage="data" direction="out"/>
+            </hwRefs>
+        </Arg>
+    </Args>
+    <Interfaces>
+        <Interface InterfaceName="ap_clk" type="clock" busTypeName="clock" mode="slave">
+            <busParams>
+                <busParam busParamName="ASSOCIATED_RESET">ap_rst</busParam>
+            </busParams>
+            <portMaps>
+                <portMap portMapName="ap_clk">CLK</portMap>
+            </portMaps>
+            <ports>
+                <port>ap_clk</port>
+            </ports>
+        </Interface>
+        <Interface InterfaceName="ap_rst" type="reset" busTypeName="reset" mode="slave">
+            <busParams>
+                <busParam busParamName="POLARITY">ACTIVE_HIGH</busParam>
+            </busParams>
+            <portMaps>
+                <portMap portMapName="ap_rst">RST</portMap>
+            </portMaps>
+            <ports>
+                <port>ap_rst</port>
+            </ports>
+        </Interface>
+        <Interface InterfaceName="data" type="data" busTypeName="data" protocol="ap_none" mode="slave" dataWidth="8">
+            <portMaps>
+                <portMap portMapName="data">DATA</portMap>
+            </portMaps>
+            <ports>
+                <port>data</port>
+            </ports>
+            <constraints>
+                <constraint constraint_type="pragma interface" mode="ap_none" register_option="0" argName="data"/>
+            </constraints>
+        </Interface>
+        <Interface InterfaceName="load" type="data" busTypeName="data" protocol="ap_none" mode="slave" dataWidth="1">
+            <portMaps>
+                <portMap portMapName="load">DATA</portMap>
+            </portMaps>
+            <ports>
+                <port>load</port>
+            </ports>
+            <constraints>
+                <constraint constraint_type="pragma interface" mode="ap_none" register_option="0" argName="load"/>
+            </constraints>
+        </Interface>
+        <Interface InterfaceName="write_r" type="data" busTypeName="data" protocol="ap_none" mode="slave" dataWidth="1">
+            <portMaps>
+                <portMap portMapName="write_r">DATA</portMap>
+            </portMaps>
+            <ports>
+                <port>write_r</port>
+            </ports>
+            <constraints>
+                <constraint constraint_type="pragma interface" mode="ap_none" register_option="0" argName="write"/>
+            </constraints>
+        </Interface>
+        <Interface InterfaceName="full" type="data" busTypeName="data" protocol="ap_none" mode="master" dataWidth="1">
+            <portMaps>
+                <portMap portMapName="full">DATA</portMap>
+            </portMaps>
+            <ports>
+                <port>full</port>
+            </ports>
+            <constraints>
+                <constraint constraint_type="pragma interface" mode="ap_none" register_option="0" argName="full"/>
+            </constraints>
+        </Interface>
+        <Interface InterfaceName="empty" type="data" busTypeName="data" protocol="ap_none" mode="master" dataWidth="1">
+            <portMaps>
+                <portMap portMapName="empty">DATA</portMap>
+            </portMaps>
+            <ports>
+                <port>empty</port>
+            </ports>
+            <constraints>
+                <constraint constraint_type="pragma interface" mode="ap_none" register_option="0" argName="empty"/>
+            </constraints>
+        </Interface>
+        <Interface InterfaceName="tx" type="data" busTypeName="data" protocol="ap_none" mode="master" dataWidth="1">
+            <portMaps>
+                <portMap portMapName="tx">DATA</portMap>
+            </portMaps>
+            <ports>
+                <port>tx</port>
+            </ports>
+            <constraints>
+                <constraint constraint_type="pragma interface" mode="ap_none" register_option="0" argName="tx"/>
+            </constraints>
+        </Interface>
+    </Interfaces>
+    <ReportHWInterface>
+        <section name="HW Interfaces" level="0">
+            <item name="REGISTER">
+                <table isCollapsed="0">
+                    <keys size="3">Interface, Mode, Bitwidth</keys>
+                    <column name="data">ap_none, 8</column>
+                    <column name="empty">ap_none, 1</column>
+                    <column name="full">ap_none, 1</column>
+                    <column name="load">ap_none, 1</column>
+                    <column name="tx">ap_none, 1</column>
+                    <column name="write_r">ap_none, 1</column>
+                </table>
+            </item>
+            <item name="TOP LEVEL CONTROL">
+                <table isCollapsed="0">
+                    <keys size="3">Interface, Type, Ports</keys>
+                    <column name="ap_clk">clock, ap_clk</column>
+                    <column name="ap_rst">reset, ap_rst</column>
+                    <column name="ap_ctrl">ap_ctrl_none</column>
+                </table>
+            </item>
+        </section>
+    </ReportHWInterface>
+    <ReportSWInterface>
+        <section name="SW I/O Information" level="0">
+            <item name="Top Function Arguments">
+                <table isCollapsed="1">
+                    <keys size="3">Argument, Direction, Datatype</keys>
+                    <column name="data">in, ap_uint&lt;8&gt;</column>
+                    <column name="load">in, ap_uint&lt;1&gt;</column>
+                    <column name="write">in, ap_uint&lt;1&gt;</column>
+                    <column name="full">out, ap_uint&lt;1&gt;&amp;</column>
+                    <column name="empty">out, ap_uint&lt;1&gt;&amp;</column>
+                    <column name="tx">out, ap_uint&lt;1&gt;&amp;</column>
+                </table>
+            </item>
+            <item name="SW-to-HW Mapping">
+                <table isCollapsed="1">
+                    <keys size="3">Argument, HW Name, HW Type</keys>
+                    <column name="data">data, port</column>
+                    <column name="load">load, port</column>
+                    <column name="write">write_r, port</column>
+                    <column name="full">full, port</column>
+                    <column name="empty">empty, port</column>
+                    <column name="tx">tx, port</column>
+                </table>
+            </item>
+        </section>
+    </ReportSWInterface>
+    <ReportBurst>
+        <section name="M_AXI Burst Information" level="0"/>
+    </ReportBurst>
+</profile>
+

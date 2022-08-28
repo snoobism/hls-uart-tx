@@ -1,0 +1,82 @@
+
+
+================================================================
+== Synthesis Summary Report of 'top'
+================================================================
++ General Information: 
+    * Date:           Sun Aug 28 13:55:18 2022
+    * Version:        2021.1 (Build 3247384 on Thu Jun 10 19:36:33 MDT 2021)
+    * Project:        ws
+    * Solution:       sol1 (Vivado IP Flow Target)
+    * Product family: artix7
+    * Target device:  xc7a15t-cpg236-1
+    
+
++ Performance & Resource Estimates: 
+    
+    PS: '+' for module; 'o' for loop; '*' for dataflow
+    +--------+------+------+---------+--------+----------+---------+------+----------+------+----+-----------+----------+-----+
+    | Modules| Issue|      | Latency | Latency| Iteration|         | Trip |          |      |    |           |          |     |
+    | & Loops| Type | Slack| (cycles)|  (ns)  |  Latency | Interval| Count| Pipelined| BRAM | DSP|     FF    |    LUT   | URAM|
+    +--------+------+------+---------+--------+----------+---------+------+----------+------+----+-----------+----------+-----+
+    |+ top   |     -|  1.69|        0|   0.000|         -|        1|     -|        no|     -|   -|  129 (~0%)|  192 (1%)|    -|
+    +--------+------+------+---------+--------+----------+---------+------+----------+------+----+-----------+----------+-----+
+
+
+================================================================
+== HW Interfaces
+================================================================
+* REGISTER
++-----------+---------+----------+
+| Interface | Mode    | Bitwidth |
++-----------+---------+----------+
+| data      | ap_none | 8        |
+| empty     | ap_none | 1        |
+| full      | ap_none | 1        |
+| load      | ap_none | 1        |
+| tx        | ap_none | 1        |
+| write_r   | ap_none | 1        |
++-----------+---------+----------+
+
+* TOP LEVEL CONTROL
++-----------+--------------+--------+
+| Interface | Type         | Ports  |
++-----------+--------------+--------+
+| ap_clk    | clock        | ap_clk |
+| ap_rst    | reset        | ap_rst |
+| ap_ctrl   | ap_ctrl_none |        |
++-----------+--------------+--------+
+
+
+================================================================
+== SW I/O Information
+================================================================
+* Top Function Arguments
++----------+-----------+-------------+
+| Argument | Direction | Datatype    |
++----------+-----------+-------------+
+| data     | in        | ap_uint<8>  |
+| load     | in        | ap_uint<1>  |
+| write    | in        | ap_uint<1>  |
+| full     | out       | ap_uint<1>& |
+| empty    | out       | ap_uint<1>& |
+| tx       | out       | ap_uint<1>& |
++----------+-----------+-------------+
+
+* SW-to-HW Mapping
++----------+---------+---------+
+| Argument | HW Name | HW Type |
++----------+---------+---------+
+| data     | data    | port    |
+| load     | load    | port    |
+| write    | write_r | port    |
+| full     | full    | port    |
+| empty    | empty   | port    |
+| tx       | tx      | port    |
++----------+---------+---------+
+
+
+================================================================
+== M_AXI Burst Information
+================================================================
+
