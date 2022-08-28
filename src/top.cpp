@@ -9,7 +9,7 @@ typedef enum {
 	SHIFT
 } STATE;
 
-#define BAUDRATE 115200
+#define BAUDRATE 9600
 #define FREQUENCY 12000000
 
 void top(ap_uint<8> data, ap_uint<1> load, ap_uint<1> write,
@@ -26,7 +26,7 @@ void top(ap_uint<8> data, ap_uint<1> load, ap_uint<1> write,
 
 	#pragma HLS pipeline II=1
 
-	const ap_uint<32> bit_duration = FREQUENCY/BAUDRATE;	// number of clock cycles that must be held by a tx bit
+	const ap_uint<32> bit_duration = FREQUENCY/BAUDRATE - 2;// number of clock cycles that must be held by a tx bit
 	static bool load_d = 0;									// flip flop used to detect a load rising edge
 	static bool write_d = 0;								// flip flop used to detect a write rising edge
 	static STATE state = READY;								// current state of the FSM
@@ -50,11 +50,6 @@ void top(ap_uint<8> data, ap_uint<1> load, ap_uint<1> write,
 	uart_data.range(0, 0) = 0;		// start bit
 	uart_data.range(8, 1) = data;	// data bits
 	uart_data.range(9, 9) = 1;		// stop bit
-
-	// load FIFO with data if load signal and FIFO is not full
-	if (!full && load_edge) {
-		data_fifo.write(uart_data);
-	}
 
 	// update TX based on FSM
 	tx = (state == SEND || state == SHIFT) ? shift_reg.range(0, 0) : 1;
@@ -93,5 +88,11 @@ void top(ap_uint<8> data, ap_uint<1> load, ap_uint<1> write,
 		default:
 			state = READY;
 			break;
+	}
+
+	// load FIFO with data if load signal and FIFO is not full
+	// write must occur after read, otherwise the latency is 2 instead of 1
+	if (!full && load_edge) {
+		data_fifo.write(uart_data);
 	}
 }
